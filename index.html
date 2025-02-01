@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Arbitrage Calculator</title>
+</head>
+<body>
+    <h1>INR → USD → USDT → INR Arbitrage Calculator</h1>
+    <form id="arbitrage-form">
+        <!-- Current USD to INR (Editable and Fetchable) -->
+        <label for="usd-to-inr">Current USD to INR Rate:</label>
+        <input type="text" id="usd-to-inr" step="0.01">
+        <button type="button" id="fetch-usd-to-inr">Fetch</button><br><br>
+
+        <!-- Input Amount in INR -->
+        <label for="inr-amount">Amount in INR:</label>
+        <input type="text" id="inr-amount" required><br><br>
+
+        <!-- Converted Amount in USD -->
+        <label for="converted-usd">Converted Amount in USD:</label>
+        <input type="text" id="converted-usd" readonly><br><br>
+
+        <!-- Wire Transfer Fee (in USD) -->
+        <label for="wire-fee-usd">Wire Transfer Fee (USD):</label>
+        <input type="text" id="wire-fee-usd" required><br><br>
+
+        <!-- USD to USDT Conversion Fee -->
+        <label for="usd-to-usdt-fee">USD to USDT Conversion Fee (%):</label>
+        <input type="number" id="usd-to-usdt-fee" step="0.01" required><br><br>
+
+        <!-- Network Fee for Transferring USDT (in USD) -->
+        <label for="network-fee-usd">Network Fee for USDT Transfer (USD):</label>
+        <input type="text" id="network-fee-usd" required><br><br>
+
+        <!-- Total USDT Received -->
+        <label for="total-usdt-received">Total USDT Received in India:</label>
+        <input type="text" id="total-usdt-received" readonly><br><br>
+
+        <!-- Current USDT to INR Rate (Editable and Fetchable) -->
+        <label for="usdt-to-inr">Current USDT to INR Rate:</label>
+        <input type="text" id="usdt-to-inr" step="0.01">
+        <button type="button" id="fetch-usdt-to-inr">Fetch</button><br><br>
+
+        <!-- Total INR -->
+        <label for="total-inr">Total INR:</label>
+        <input type="text" id="total-inr" readonly><br><br>
+
+        <!-- Exchange Fee -->
+        <label for="exchange-fee">Exchange Fee (%):</label>
+        <input type="number" id="exchange-fee" step="0.01" value="0.5"><br><br>
+
+        <!-- GST Fee -->
+        <label for="gst-fee">GST Fee (%):</label>
+        <input type="number" id="gst-fee" step="0.01" value="18"><br><br>
+
+        <!-- TDS (Tax Deducted at Source) -->
+        <label for="tds">TDS (%):</label>
+        <input type="number" id="tds" step="0.01" value="1"><br><br>
+
+        <!-- Miscellaneous Fees in INR -->
+        <label for="miscellaneous-fee-inr">Miscellaneous Fees (INR):</label>
+        <input type="text" id="miscellaneous-fee-inr" value="₹ 0"><br><br>
+
+        <!-- Miscellaneous Fees in USD -->
+        <label for="miscellaneous-fee-usd">Miscellaneous Fees (USD):</label>
+        <input type="text" id="miscellaneous-fee-usd" value="$ 0"><br><br>
+
+        <!-- INR Received -->
+        <label for="inr-received">INR Received:</label>
+        <input type="text" id="inr-received" readonly><br><br>
+
+        <!-- Profit (Bold) -->
+        <strong>Profit:</strong> 
+        <input type="text" id="profit-field" readonly style="font-weight: bold;"><br><br>
+
+        <div>
+            <label for="profit-margin">Profit Margin (%):</label>
+            <input type="text" id="profit-margin" readonly />
+        </div>
+          
+    </form>
+
+    <!-- Link to External JavaScript -->
+    <script src="./script.js"></script>
+</body>
+</html>

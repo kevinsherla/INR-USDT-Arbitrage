@@ -1,0 +1,84 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --background: #f8f9fa;
+    --text: #2c3e50;
+    --border: #dfe6e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+.calculator-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.calculator-header h1 {
+    font-size: 1.75em;
+    color: var(--primary);
+}
+
+.calculator-sections {
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns */
+    gap: 1rem; /* Space between rows and columns */
+}
+
+.input-group label {
+    text-align: right; /* Align labels to the right */
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+button {
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .calculator-sections {
+        grid-template-columns: auto; /* Single column on small screens */
+        gap: 0.75rem; /* Reduce spacing */
+        text-align: left; /* Align labels and inputs for readability */
+        justify-content: center; /* Center content */
+        align-items: center; /* Align vertically */
+   }
+}
